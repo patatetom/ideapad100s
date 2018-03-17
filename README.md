@@ -91,3 +91,11 @@ boot
 > gzip < /dev/mmcblk1 | split -d -b 1G - /run/archiso/bootmnt/backup/Ideapad-
 > sync
 > ```
+
+
+
+## after installation
+
+### wifi
+
+### sound
