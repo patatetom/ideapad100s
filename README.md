@@ -17,4 +17,4 @@ installation of [SwagArch](https://swagarch.github.io/) on a Lenovo Ideapd 100s
 
 ## before installation
 
-the Ideapad is delivered with 32-bit UEFI firmware and SwagArch, like many other GNU/Linux distributions, is not « mixed mode » and must therefore be slightly modified in order to boot.
+the Ideapad is delivered with 32-bit UEFI firmware and SwagArch, like many other GNU/Linux distributions, is not « mixed mode » : so it must therefore be slightly modified in order to boot.
