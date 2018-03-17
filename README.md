@@ -65,7 +65,7 @@ on the Ideapad with the USB flash drive plugged :
 - access the boot menu
 ```text
 power off/on the computer (reboot),
-press [F12] key (use Fn key) to show the boot menu,
+press [F12] key (use [Fn] key) to show the boot menu,
 ```
 
 - in the boot menu, boot live SwagArch (step 1/2)
@@ -81,3 +81,5 @@ initrd /arch/boot/intel_ucode.img /arch/boot/x86_64/archiso.img
 boot
 ```
 *note that the keyboard is defined as [QWERTY] and that the [Tab] key is available in the Grub console*
+
+**after a few seconds, you should be in SwagArch, ready to install it on your internal device, using the installer provided for this purpose.**
