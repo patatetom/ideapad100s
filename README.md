@@ -53,5 +53,9 @@ power on the computer,
 press F2 key (use Fn key) to enter in the UEFI firmware,
 go to the Configuration tab,
 turn off the Secure Boot
-and finally press F10 key to save changes and exit
+and finally press F10 key to save change and exit
 ```
+
+
+
+## installation
