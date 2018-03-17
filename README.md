@@ -76,8 +76,8 @@ and presse [Enter] key
 
 - in the Grub console, boot live SwagArch (step 2/2)
 ```bash
-linux /arch/boot/x86_64/vmlinux archisobasedir=arch archisolabel=SWGARCHXX
+linux /arch/boot/x86_64/vmlinux archisobasedir=arch archisolabel=SWAGARCHXX
 initrd /arch/boot/intel_ucode.img /arch/boot/x86_64/archiso.img
 boot
 ```
-*note that you can use the [Tab] key in the console*
+*note that the keyboard is defined as [QWERTY] and that the [Tab] key is available in the Grub console*
