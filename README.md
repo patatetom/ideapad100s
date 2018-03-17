@@ -22,12 +22,16 @@ the Ideapad is delivered with 32-bit UEFI firmware and SwagArch, like many other
 
 - prepare the USB flash drive
 ```
+umount /dev/sdx*
 fdisk /dev/sdx <<<g$'\n'n$'\n\n\n\n't$'\n'1$'\n'w
 blockdev --rereadpt /dev/sdx
 mkfs.vfat -F 32 -n SWAGARCHXX /dev/sdx1
 ```
 *note that **all data on /dev/sdx will be deleted***
 
-- copy all data from the SwagArch release to the USB flash drive
+- copy data from the SwagArch release to the USB flash drive
 ```
+mount /tmp/swagarch-1803_x86_64.iso /mnt/cdrom
+mount /dev/sdx1 /mnt/flash
+cp -a /mnt/cdrom/* /mnt/flash
 ```
