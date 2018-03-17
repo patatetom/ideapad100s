@@ -20,8 +20,10 @@ installation of [SwagArch](https://swagarch.github.io/) on a Lenovo Ideapd 100s
 
 the Ideapad is delivered with 32-bit UEFI firmware and SwagArch, like many other GNU/Linux distributions, is not « mixed mode » : so it must therefore be slightly modified in order to boot.
 
+on the GNU/Linux system, in a terminal, as root and with the USB flash drive plugged :
+
 - prepare the USB flash drive
-```
+```bash
 umount /dev/sdx*
 fdisk /dev/sdx <<<g$'\n'n$'\n\n\n\n't$'\n'1$'\n'w
 blockdev --rereadpt /dev/sdx
@@ -30,23 +32,25 @@ mkfs.vfat -F 32 -n SWAGARCHXX /dev/sdx1
 *note that **all data on /dev/sdx will be deleted***
 
 - copy data from the SwagArch release to the USB flash drive
-```
+```bash
 mount /tmp/swagarch-1803_x86_64.iso /mnt/cdrom
 mount /dev/sdx1 /mnt/flash
 cp -a /mnt/cdrom/* /mnt/flash
 ```
 
 - copy the 32-bit bootloader to the USB flash drive
-```
+```bash
 cp /tmp/bootia32.efi /mnt/flash/EFI/boot/
 umount /mnt/cdrom /mnt/flash
 ```
 *the USB flash drive is now ready*
 
-- disable Secure Boot on the Ideapad
+on the Ideapad :
+
+- disable Secure Boot
 ```text
-power on the Ideapad,
-press F2 key (with Fn key) to access the UEFI firmware,
+power on the computer,
+press F2 key (use Fn key) to enter in the UEFI firmware,
 go to the Configuration tab,
 turn off the Secure Boot
 and finally press F10 key to save changes and exit
