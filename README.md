@@ -35,3 +35,9 @@ mount /tmp/swagarch-1803_x86_64.iso /mnt/cdrom
 mount /dev/sdx1 /mnt/flash
 cp -a /mnt/cdrom/* /mnt/flash
 ```
+
+- copy the 32-bit bootloader to the USB flash drive
+```
+cp /tmp/bootia32.efi /mnt/flash/EFI/boot/
+umount /mnt/cdrom /mnt/flash
+```
