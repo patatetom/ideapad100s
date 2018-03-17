@@ -83,3 +83,10 @@ boot
 *note that the keyboard is defined as [QWERTY] and that the [Tab] key is available in the Grub console*
 
 **after a few seconds, you should be in SwagArch, ready to install it on your internal device, using the installer provided for this purpose.**
+
+> if there is enough place on the USB flash disk, the previous system can be saved before the installation
+> ```
+> mkdir /run/archiso/bootmnt/backup/
+> gzip < /dev/mmcblk1 | split -d -b 1G - /run/archiso/bootmnt/backup/Ideapad-
+> sync
+> ```
