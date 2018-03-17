@@ -41,3 +41,13 @@ cp -a /mnt/cdrom/* /mnt/flash
 cp /tmp/bootia32.efi /mnt/flash/EFI/boot/
 umount /mnt/cdrom /mnt/flash
 ```
+*the USB flash drive is now ready*
+
+- disable Secure Boot on the Ideapad
+```text
+power on the Ideapad,
+press F2 key (with Fn key) to access the UEFI firmware,
+go to the Configuration tab,
+turn off the Secure Boot
+and finally press F10 key to save changes and exit
+```
