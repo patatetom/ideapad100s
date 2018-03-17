@@ -29,7 +29,7 @@ fdisk /dev/sdx <<<g$'\n'n$'\n\n\n\n't$'\n'1$'\n'w
 blockdev --rereadpt /dev/sdx
 mkfs.vfat -F 32 -n SWAGARCHXX /dev/sdx1
 ```
-*note that **all data on /dev/sdx will be deleted***
+*:warning: note that all data on /dev/sdx will be deleted*
 
 - copy data from the SwagArch release to the USB flash drive
 ```bash
@@ -43,7 +43,7 @@ cp -a /mnt/cdrom/* /mnt/flash
 cp /tmp/bootia32.efi /mnt/flash/EFI/boot/
 umount /mnt/cdrom /mnt/flash
 ```
-*the USB flash drive is now ready*
+**the USB flash drive is now ready**
 
 on the Ideapad :
 
@@ -84,8 +84,9 @@ boot
 
 **after a few seconds, you should be in SwagArch, ready to install it on your internal device, using the installer provided for this purpose.**
 
-> if there is enough place on the USB flash disk, the previous system can be saved before the installation
+> if there is enough free space (~30Gb) on the USB flash disk, the previous system can be saved before the installation
 > ```
+> df -h /run/archiso/bootmnt/
 > mkdir /run/archiso/bootmnt/backup/
 > gzip < /dev/mmcblk1 | split -d -b 1G - /run/archiso/bootmnt/backup/Ideapad-
 > sync
