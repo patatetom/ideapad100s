@@ -68,8 +68,16 @@ power off/on the computer (reboot),
 press [F12] key (use Fn key) to show the boot menu,
 ```
 
-- boot live SwagArch (step 1/2)
+- in the boot menu, boot live SwagArch (step 1/2)
 ```
 select entry EFI USB Device (USB Mass Storage Driver)
 and presse [Enter] key
 ```
+
+- in the Grub console, boot live SwagArch (step 2/2)
+```bash
+linux /arch/boot/x86_64/vmlinux archisobasedir=arch archisolabel=SWGARCHXX
+initrd /arch/boot/intel_ucode.img /arch/boot/x86_64/archiso.img
+boot
+```
+*note that you can use the [Tab] key in the console*
