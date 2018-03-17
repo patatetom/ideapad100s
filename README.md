@@ -50,12 +50,26 @@ on the Ideapad :
 - disable Secure Boot
 ```text
 power on the computer,
-press F2 key (use Fn key) to enter in the UEFI firmware,
+press [F2] key (use [Fn] key) to enter in the UEFI firmware,
 go to the Configuration tab,
 turn off the Secure Boot
-and finally press F10 key to save change and exit
+and finally press [F10] key to save change and exit
 ```
 
 
 
 ## installation
+
+on the Ideapad with the USB flash drive plugged :
+
+- access the boot menu
+```text
+power off/on the computer (reboot),
+press [F12] key (use Fn key) to show the boot menu,
+```
+
+- boot live SwagArch (step 1/2)
+```
+select entry EFI USB Device (USB Mass Storage Driver)
+and presse [Enter] key
+```
