@@ -9,7 +9,7 @@ installation of [SwagArch](https://swagarch.github.io/) on a Lenovo Ideapd 100s
 
 ## prerequisites
 
-- a fairly recent and functional GNU/Linux system *(here an ArchLinux with a root account)*
+- a fairly recent and functional GNU/Linux system *(here an ArchLinux)*
 - a USB flash drive with a capacity of at least 2Gb *(here a 16Gb available from /dev/sdx)*
 - the [latest release](https://github.com/SwagArch/swagarch-build/releases/latest) of SwagArch *(here 18.03)*
 - the [bootia32.efi](https://github.com/patatetom/ideapad100s/raw/master/bootia32.efi) bootloader available above
@@ -20,10 +20,11 @@ installation of [SwagArch](https://swagarch.github.io/) on a Lenovo Ideapd 100s
 
 the Ideapad is delivered with 32-bit UEFI firmware and SwagArch, like many other GNU/Linux distributions, is not « mixed mode » : so it must therefore be slightly modified in order to boot.
 
-on the GNU/Linux system, in a terminal, as root and with the USB flash drive plugged :
+in a terminal, on the GNU/Linux system with the USB flash drive plugged :
 
 - prepare the USB flash drive
 ```bash
+sudo -i
 umount /dev/sdx*
 fdisk /dev/sdx <<<g$'\n'n$'\n\n\n\n't$'\n'1$'\n'w
 blockdev --rereadpt /dev/sdx
@@ -86,6 +87,7 @@ boot
 
 > if there is enough free space (~30Gb) on the USB flash disk, the previous system can be saved before the installation
 > ```
+> sudo -i
 > df -h /run/archiso/bootmnt/
 > mkdir /run/archiso/bootmnt/backup/
 > gzip < /dev/mmcblk1 | split -d -b 1G - /run/archiso/bootmnt/backup/Ideapad-
